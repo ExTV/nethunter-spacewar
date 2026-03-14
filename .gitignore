@@ -1,0 +1,6 @@
+# Kali rootfs — too large for git, download separately from Kali NetHunter releases
+kalifs-*.tar.xz
+nh_build/kalifs-*.tar.xz
+
+# NetHunter APKs — download from https://store.nethunter.com
+nh_build/data/app/*.apk

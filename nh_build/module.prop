@@ -1,0 +1,7 @@
+id=nethunter
+name=Kali NetHunter
+version=1.4.0
+versionCode=14000
+author=Kali NetHunter Team @ GitLab
+description=Kali NetHunter customized for Nothing Phone 1 (Spacewar) - vendor module symlinks, HID support
+template=1510
