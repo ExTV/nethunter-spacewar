@@ -14,7 +14,6 @@ Installs the full Kali NetHunter environment as a Magisk module:
 - Extracts the Kali ARM64 chroot rootfs to /data/local/nhsystem/
 - Sets up USB HID gadget (keyboard + mouse) via configfs on boot
 - Symlinks vendor kernel modules from /vendor/lib/modules to /system/lib/modules
-- Mounts cgroup2 into the NetHunter chroot for Docker/DroidSpaces compatibility
 - Copies WiFi adapter firmwares, terminfo, nano highlights, HID keyboard binary
 - Sets NetHunter wallpaper at correct screen resolution (1080x2400)
 
@@ -41,10 +40,6 @@ The Nothing Phone 1 uses the configfs USB gadget framework, not the legacy
 android_usb interface. service.sh was written specifically for this device to
 create HID keyboard and mouse functions through configfs, then restore ADB.
 
-### DroidSpaces and Docker cgroup2 support
-service.sh bind-mounts /sys/fs/cgroup into the NetHunter chroot at boot so
-Docker and DroidSpaces can see the cgroup2 hierarchy. Without this, Docker
-check-config fails and container runtimes cannot start.
 
 ### Bug fixes from the original NetHunter installer
 - Replaced bash-only [[ ]] syntax with POSIX [ ] for Android sh compatibility
